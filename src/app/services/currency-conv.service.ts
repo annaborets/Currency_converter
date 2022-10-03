@@ -11,32 +11,7 @@ export enum Currency {
   BTC = 'BTC',
 }
 
-// type CurrencyMap = {
-//   [key in Currency]: {
-//     [key in Currency]: number;
-//   };
-// };
-
-// type CurrencyMap = Record<Currency, { [key in Currency]: number }>;
 export type CurrencyMap = Record<Currency, Record<Currency, number>>;
-
-// const currencyMap: CurrencyMap = {
-//   [Currency.UAH]: {
-//     [Currency.USD]: 0.2,
-//     [Currency.EUR]: 0.1,
-//     [Currency.UAH]: 1
-//   },
-//   [Currency.USD]: {
-//     [Currency.USD]: 1,
-//     [Currency.EUR]: 1.02,
-//     [Currency.UAH]: 37
-//   },
-//   [Currency.EUR]: {
-//     [Currency.USD]: 0.97,
-//     [Currency.EUR]: 1,
-//     [Currency.UAH]: 36
-//   },
-// }
 
 @Injectable({
   providedIn: 'root',
