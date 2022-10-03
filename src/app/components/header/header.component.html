@@ -1,0 +1,8 @@
+<div class="header">
+  <div *ngFor="let item of filteredCurrency" class="header__item">
+    <div class="header__item header__item--split">{{ item.ccy }}</div>
+    <div>{{ item.buy | number: "1.2-2" }}</div>
+    <span> / </span>
+    <div>{{ item.sale | number: "1.2-2" }}</div>
+  </div>
+</div>

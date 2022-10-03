@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <h2 class="header">Currency converter</h2>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>I have</mat-label>
+    <input
+      matInput
+      placeholder="100"
+      type="number"
+      value="{{ fromValue }}"
+      (input)="changeValueFrom($event)"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Currency</mat-label>
+    <mat-select (selectionChange)="changeFromCurrency($event)">
+      <mat-option *ngFor="let item of getFromOptions()" [value]="item">
+        {{ item }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span class="item__icon">
+    <mat-icon>arrow_forward</mat-icon>
+  </span>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>I'll get</mat-label>
+    <input
+      matInput
+      placeholder="100"
+      type="number"
+      value="{{ toValue }}"
+      (input)="changeValueTo($event)"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Currency</mat-label>
+    <mat-select (selectionChange)="changeToCurrency($event)">
+      <mat-option *ngFor="let item of getToOptions()" [value]="item">
+        {{ item }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.8rem;
+  padding: 100px 0;
+
+  &__item {
+    display: flex;
+    &--split {
+      margin-right: 15px;
+    }
+  }
+}
